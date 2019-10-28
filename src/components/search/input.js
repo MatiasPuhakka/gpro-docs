@@ -1,13 +1,13 @@
-import React from "react"
-import { connectSearchBox } from "react-instantsearch-dom"
+import React from 'react'
+import { connectSearchBox } from 'react-instantsearch-dom'
 
-import styled, { css } from "styled-components";
-import { Search } from "styled-icons/fa-solid/Search";
+import styled, { css } from 'styled-components'
+import { Search } from 'styled-icons/fa-solid/Search'
 
 const SearchIcon = styled(Search)`
   width: 1em;
   pointer-events: none;
-  margin-right: 10px
+  margin-right: 10px;
 `
 const focus = css`
   background: white;
@@ -59,21 +59,14 @@ const Form = styled.form`
 `
 
 export default connectSearchBox(({ refine, ...rest }) => {
-  const searchCustom = '';
-  const preventSubmit = (e) => {
-    e.preventDefault();
+  const searchCustom = ''
+  const preventSubmit = e => {
+    e.preventDefault()
   }
   return (
     <Form className={'formElement'} onSubmit={preventSubmit}>
       <SearchIcon />
-      <Input
-        className={'searchInput ' + searchCustom}
-        type="text"
-        placeholder="Search"
-        aria-label="Search"
-        onChange={e => refine(e.target.value)}
-        {...rest}
-      />
+      <Input className={'searchInput ' + searchCustom} type="text" placeholder="Search" aria-label="Search" onChange={e => refine(e.target.value)} {...rest} />
     </Form>
-  )}
-);
+  )
+})

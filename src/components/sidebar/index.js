@@ -1,25 +1,26 @@
-import React from "react";
-import Tree from './tree';
-import {StaticQuery, graphql} from "gatsby";
-import styled from "react-emotion";
-import {ExternalLink} from "react-feather";
-import '../styles.css';
-import config from '../../../config';
+import React from 'react'
+import Tree from './tree'
+import { StaticQuery, graphql } from 'gatsby'
+import Link from '../link'
+import styled from 'react-emotion'
+import { ExternalLink } from 'react-feather'
+import '../styles.css'
+import config from '../../../config'
 
-const forcedNavOrder = config.sidebar.forcedNavOrder;
+const forcedNavOrder = config.sidebar.forcedNavOrder
 
 // eslint-disable-next-line no-unused-vars
 const ListItem = styled(({ className, active, level, ...props }) => {
-    return (
-      <li className={className}>
-        <a href={props.to} {...props} />
-      </li>
-    );
+  return (
+    <li className={className}>
+      <a href={props.to} {...props} />
+    </li>
+  )
 })`
   list-style: none;
 
   a {
-    color: #5C6975;
+    color: #5c6975;
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
     padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
@@ -44,12 +45,10 @@ const ListItem = styled(({ className, active, level, ...props }) => {
       margin-right: 1rem;
     }
   }
-`;
+`
 
 const Sidebar = styled('aside')`
   width: 100%;
-  /* background-color: rgb(245, 247, 249); */
-  /* border-right: 1px solid #ede7f3; */
   height: 100vh;
   overflow: auto;
   position: fixed;
@@ -59,25 +58,10 @@ const Sidebar = styled('aside')`
   position: sticky;
   top: 0;
   padding-right: 0;
-  background-color: #372476;
-  /* Safari 4-5, Chrome 1-9 */
-  background: linear-gradient(#372476, #3b173b);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#372476), to(#3b173b));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #372476, #3b173b);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #372476, #3b173b);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #372476, #3b173b);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #372476, #3b173b);
   @media only screen and (max-width: 767px) {
     padding-left: 0px;
-    background-color: #372476;
-    background: #372476;
   }
-  @media (min-width: 767px) and (max-width:1023px)
-  {
+  @media (min-width: 767px) and (max-width: 1023px) {
     padding-left: 0;
   }
   @media only screen and (max-width: 1023px) {
@@ -85,8 +69,7 @@ const Sidebar = styled('aside')`
     /* position: relative; */
     height: 100vh;
   }
-`;
-
+`
 
 const Divider = styled(props => (
   <li {...props}>
@@ -102,10 +85,9 @@ const Divider = styled(props => (
     border: 0;
     border-bottom: 1px solid #ede7f3;
   }
-`;
+`
 
-
-const SidebarLayout = ({location}) => (
+const SidebarLayout = ({ location }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -121,13 +103,14 @@ const SidebarLayout = ({location}) => (
         }
       }
     `}
-    render={({allMdx}) => {
+    render={({ allMdx }) => {
       return (
         <Sidebar>
+          <Link to="/" className={'navbar-brand text-white ml-3 mt-3'}>
+            Test Docs
+          </Link>
           <ul className={'sideBarUL'}>
-            <Tree
-              edges={allMdx.edges}
-            />
+            <Tree edges={allMdx.edges} />
             <Divider />
             {config.sidebar.links.map((link, key) => {
               if (link.link !== '' && link.text !== '') {
@@ -136,14 +119,14 @@ const SidebarLayout = ({location}) => (
                     {link.text}
                     <ExternalLink size={14} />
                   </ListItem>
-                );
+                )
               }
             })}
           </ul>
         </Sidebar>
-      );
+      )
     }}
   />
-);
+)
 
-export default SidebarLayout;
+export default SidebarLayout

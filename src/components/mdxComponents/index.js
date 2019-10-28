@@ -1,10 +1,10 @@
-import React from "react";
-import Heading from "../heading";
-import Text from "./text";
-import Code from "./code";
-import CodeBlock from "./codeBlock";
-import Pre from "./pre";
-import AnchorTag from "./anchor";
+import React from 'react'
+import Heading from '../heading'
+import Text from './text'
+import Code from './code'
+import CodeBlock from './codeBlock'
+import Pre from './pre'
+import AnchorTag from './anchor'
 
 /* eslint-disable react/display-name */
 export default {
@@ -24,4 +24,4 @@ export default {
   // TODO add `ul`
   // TODO add `li`
   // TODO add `table`
-};
+}

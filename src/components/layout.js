@@ -1,46 +1,45 @@
-import React from "react";
-import styled from "react-emotion";
-import { MDXProvider } from "@mdx-js/react";
-import ThemeProvider from "./themeProvider";
-import mdxComponents from "./mdxComponents";
-import Sidebar from "./sidebar";
-import RightSidebar from "./rightSidebar";
+import React from 'react'
+import styled from 'react-emotion'
+import { MDXProvider } from '@mdx-js/react'
+import ThemeProvider from './themeProvider'
+import mdxComponents from './mdxComponents'
+import Sidebar from './sidebar'
+import RightSidebar from './rightSidebar'
 
 const Wrapper = styled('div')`
+  background: #183055;
   display: flex;
   justify-content: space-between;
 
   @media only screen and (max-width: 767px) {
     display: block;
   }
-`;
+`
 
 const Content = styled('main')`
   display: flex;
   flex-grow: 1;
-  margin: 0px 88px;
-  margin-top: 3rem;
+  padding: 3rem 4rem;
+  background: #fff;
+  border-radius: 8px 0 0 8px;
 
   @media only screen and (max-width: 1023px) {
-    padding-left: 0;
-    margin: 0 10px;
-    margin-top: 3rem;
+    padding: 2rem 1rem;
   }
-`;
+`
 
 const MaxWidth = styled('div')`
-
   @media only screen and (max-width: 50rem) {
     width: 100%;
     position: relative;
   }
-`;
+`
 const LeftSideBarWidth = styled('div')`
   width: 298px;
-`;
+`
 const RightSideBarWidth = styled('div')`
   width: 224px;
-`;
+`
 const Layout = ({ children, location }) => (
   <ThemeProvider location={location}>
     <MDXProvider components={mdxComponents}>
@@ -57,6 +56,6 @@ const Layout = ({ children, location }) => (
       </Wrapper>
     </MDXProvider>
   </ThemeProvider>
-);
+)
 
-export default Layout;
+export default Layout

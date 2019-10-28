@@ -1,14 +1,14 @@
-import system from "@rebass/components/emotion";
+import system from '@rebass/components/emotion'
 
 const Container = system(
   {
-    is: "div",
+    is: 'div',
     px: 3,
-    mx: "auto",
+    mx: 'auto',
     maxWidth: 1024
   },
-  "maxWidth"
-);
-Container.displayName = "Container";
+  'maxWidth'
+)
+Container.displayName = 'Container'
 
-export default Container;
+export default Container
