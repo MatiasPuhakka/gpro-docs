@@ -43,30 +43,13 @@ injectGlobal`
   }
 `
 
-const Edit = styled('div')`
-  padding: 1rem 1.5rem;
-  text-align: right;
+const Title = styled('h1')`
+  font-weight: 300;
+`
 
-  a {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1em;
-    text-decoration: none;
-    color: #555;
-    border: 1px solid rgb(211, 220, 228);
-    cursor: pointer;
-    border-radius: 3px;
-    transition: all 0.2s ease-out 0s;
-    text-decoration: none;
-    color: rgb(36, 42, 49);
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(116, 129, 141, 0.1) 0px 1px 1px 0px;
-    height: 30px;
-    padding: 5px 16px;
-    &:hover {
-      background-color: rgb(245, 247, 249);
-    }
-  }
+const Hr = styled('hr')`
+  border: 1px solid #edf2f7;
+  margin: 2rem 0;
 `
 
 export default class MDXRuntimeTest extends Component {
@@ -133,9 +116,8 @@ export default class MDXRuntimeTest extends Component {
           {metaDescription ? <meta property="twitter:description" content={metaDescription} /> : null}
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
-        <div className={'titleWrapper'}>
-          <h1 className={'title'}>{mdx.fields.title}</h1>
-        </div>
+        <Title>{mdx.fields.title}</Title>
+        <Hr />
         <div className={'mainWrapper'}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>

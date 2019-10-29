@@ -7,7 +7,7 @@ import config from '../../config'
 
 const forcedNavOrder = config.sidebar.forcedNavOrder
 
-const Sidebar = styled('aside')`
+const Sidebar = styled('nav')`
   width: 100%;
   background-color: #fff;
   border-right: 1px solid #ede7f3;

@@ -7,7 +7,7 @@ import Sidebar from './sidebar'
 import RightSidebar from './rightSidebar'
 
 const Wrapper = styled('div')`
-  background: #183055;
+  background: #fff;
   display: flex;
   justify-content: space-between;
 
@@ -19,13 +19,7 @@ const Wrapper = styled('div')`
 const Content = styled('main')`
   display: flex;
   flex-grow: 1;
-  padding: 3rem 4rem;
-  background: #fff;
-  border-radius: 8px 0 0 8px;
-
-  @media only screen and (max-width: 1023px) {
-    padding: 2rem 1rem;
-  }
+  padding: 3rem 1rem;
 `
 
 const MaxWidth = styled('div')`
@@ -34,9 +28,11 @@ const MaxWidth = styled('div')`
     position: relative;
   }
 `
+
 const LeftSideBarWidth = styled('div')`
   width: 298px;
 `
+
 const RightSideBarWidth = styled('div')`
   width: 224px;
 `
@@ -44,13 +40,13 @@ const Layout = ({ children, location }) => (
   <ThemeProvider location={location}>
     <MDXProvider components={mdxComponents}>
       <Wrapper>
-        <LeftSideBarWidth className={'hidden-xs'}>
+        <LeftSideBarWidth>
           <Sidebar location={location} />
         </LeftSideBarWidth>
         <Content>
           <MaxWidth>{children}</MaxWidth>
         </Content>
-        <RightSideBarWidth className={'hidden-xs'}>
+        <RightSideBarWidth>
           <RightSidebar location={location} />
         </RightSideBarWidth>
       </Wrapper>

@@ -143,7 +143,7 @@ pre {
 }
 
 /* Header section ends here */
-.headerNav {
+/* .headerNav {
   font-family: 'Roboto';
   padding: 0px 24px;
   color: rgb(116, 76, 188);
@@ -163,9 +163,9 @@ pre {
 
 .logoWrapper img {
   width: 40px;
-}
+} */
 
-.sideBarUL {
+/* .sideBarUL {
   margin-top: 1rem;
 }
 
@@ -185,7 +185,7 @@ pre {
   border-style: solid none solid solid;
   border-width: 1px 0px 1px 1px;
   border-color: transparent currentcolor transparent transparent;
-}
+} */
 
 .rightSideTitle {
   font-size: 10px;
@@ -220,7 +220,7 @@ pre {
   border-left: 1px solid #e6ecf1;
 }
 
-.sideBarUL .item {
+/* .sideBarUL .item {
   list-style: none;
   padding: 0;
 }
@@ -236,7 +236,7 @@ pre {
 .sideBarUL .item > a:hover {
   background-color: #542683;
   color: #fff !important;
-}
+} */
 .showFrontLine .item > a:hover {
   background-color: #542683;
 }
@@ -274,17 +274,6 @@ pre {
   padding-bottom: 40px;
   border-bottom: 1px solid rgb(230, 236, 241);
   margin-bottom: 32px;
-}
-
-.title {
-  font-size: 32px;
-  line-height: 1.5;
-  font-weight: 500;
-  border-left: 2px solid rgb(116, 76, 188);
-  padding: 0 16px;
-  flex: 1;
-  margin-top: 0;
-  padding-top: 0;
 }
 
 .gitBtn {

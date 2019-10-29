@@ -3,11 +3,64 @@ import Tree from './tree'
 import { StaticQuery, graphql } from 'gatsby'
 import Link from '../link'
 import styled from 'react-emotion'
-import { ExternalLink } from 'react-feather'
 import '../styles.css'
 import config from '../../../config'
 
-const forcedNavOrder = config.sidebar.forcedNavOrder
+const Sidebar = styled('nav')`
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+
+  .navbar-brand {
+    color: #4a5568;
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: inherit;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+`
+
+const List = styled('ul')`
+  list-style: none;
+  padding: 1.5rem 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.25rem;
+
+      &.active a {
+        background: rgba(178, 245, 234, 0.25);
+        color: #319795;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  a {
+    color: #718096;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin-left: -0.5rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &:hover {
+      color: #1a202c;
+    }
+  }
+`
 
 // eslint-disable-next-line no-unused-vars
 const ListItem = styled(({ className, active, level, ...props }) => {
@@ -20,7 +73,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   list-style: none;
 
   a {
-    color: #5c6975;
+    color: #718096;
     text-decoration: none;
     font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
     padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
@@ -47,46 +100,6 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   }
 `
 
-const Sidebar = styled('aside')`
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
-  position: fixed;
-  padding-left: 0px;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: sticky;
-  top: 0;
-  padding-right: 0;
-  @media only screen and (max-width: 767px) {
-    padding-left: 0px;
-  }
-  @media (min-width: 767px) and (max-width: 1023px) {
-    padding-left: 0;
-  }
-  @media only screen and (max-width: 1023px) {
-    width: 100%;
-    /* position: relative; */
-    height: 100vh;
-  }
-`
-
-const Divider = styled(props => (
-  <li {...props}>
-    <hr />
-  </li>
-))`
-  list-style: none;
-  padding: 0.5rem 0;
-
-  hr {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-bottom: 1px solid #ede7f3;
-  }
-`
-
 const SidebarLayout = ({ location }) => (
   <StaticQuery
     query={graphql`
@@ -106,23 +119,21 @@ const SidebarLayout = ({ location }) => (
     render={({ allMdx }) => {
       return (
         <Sidebar>
-          <Link to="/" className={'navbar-brand text-white ml-3 mt-3'}>
+          <Link to="/" className={'navbar-brand'}>
             Test Docs
           </Link>
-          <ul className={'sideBarUL'}>
+          <List>
             <Tree edges={allMdx.edges} />
-            <Divider />
             {config.sidebar.links.map((link, key) => {
               if (link.link !== '' && link.text !== '') {
                 return (
                   <ListItem key={key} to={link.link}>
                     {link.text}
-                    <ExternalLink size={14} />
                   </ListItem>
                 )
               }
             })}
-          </ul>
+          </List>
         </Sidebar>
       )
     }}
