@@ -19,18 +19,19 @@ injectGlobal`
   }
 
   html, body {
+    color: #2D3748;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
   }
 `
 
 const H1 = styled('h1')`
-  margin-top: 1rem;
+  margin-top: 2rem;
 `
 
 const Hr = styled('hr')`
   border: 1px solid #edf2f7;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
 `
 
 export default class MDXRuntimeTest extends Component {
@@ -99,7 +100,7 @@ export default class MDXRuntimeTest extends Component {
         </Helmet>
         <H1>{mdx.fields.title}</H1>
         <Hr />
-        <div className={'mainWrapper'}>
+        <div className={'md-body'}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
       </Layout>

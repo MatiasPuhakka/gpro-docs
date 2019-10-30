@@ -7,7 +7,7 @@ import '../styles.css'
 import config from '../../../config'
 
 const Sidebar = styled('nav')`
-  padding-top: 1rem;
+  padding-top: 2rem;
   position: sticky;
   top: 0;
 

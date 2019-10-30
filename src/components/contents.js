@@ -8,7 +8,7 @@ const Sidebar = styled('nav')`
   overflow: auto;
   position: sticky;
   top: 0;
-  padding-top: 1rem;
+  padding-top: 2rem;
 
   @media only screen and (max-width: 50rem) {
     width: 100%;

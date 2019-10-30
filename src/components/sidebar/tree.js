@@ -96,14 +96,7 @@ const Tree = ({ edges }) => {
       [url]: !collapsed[url]
     })
   }
-  return (
-    <TreeNode
-      className={`${config.sidebar.frontLine ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
-      setCollapsed={toggle}
-      collapsed={collapsed}
-      {...treeData}
-    />
-  )
+  return <TreeNode className={`firstLevel`} setCollapsed={toggle} collapsed={collapsed} {...treeData} />
 }
 
 export default Tree
