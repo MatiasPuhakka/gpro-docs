@@ -4,13 +4,14 @@ import { graphql } from 'gatsby'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import styled, { injectGlobal } from 'react-emotion'
 import { Layout, Link } from '$components'
-import NextPrevious from '../components/NextPrevious'
 import '../components/styles.css'
 import config from '../../config'
 
 const forcedNavOrder = config.sidebar.forcedNavOrder
 
 injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
   * {
     margin: 0;
     padding: 0;
@@ -18,33 +19,13 @@ injectGlobal`
   }
 
   html, body {
-    font-family: -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      "Roboto",
-      "Roboto Light",
-      "Oxygen",
-      "Ubuntu",
-      "Cantarell",
-      "Fira Sans",
-      "Droid Sans",
-      "Helvetica Neue",
-      sans-serif,
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol";
-
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
-  }
-
-  a {
-    transition: color 0.15s;
-    color: #663399;
   }
 `
 
-const Title = styled('h1')`
-  font-weight: 300;
+const H1 = styled('h1')`
+  margin-top: 1rem;
 `
 
 const Hr = styled('hr')`
@@ -116,13 +97,10 @@ export default class MDXRuntimeTest extends Component {
           {metaDescription ? <meta property="twitter:description" content={metaDescription} /> : null}
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
-        <Title>{mdx.fields.title}</Title>
+        <H1>{mdx.fields.title}</H1>
         <Hr />
         <div className={'mainWrapper'}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
-        </div>
-        <div className={'addPaddTopBottom'}>
-          <NextPrevious mdx={mdx} nav={nav} />
         </div>
       </Layout>
     )

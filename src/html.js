@@ -14,12 +14,6 @@ export default class HTML extends React.Component {
           <meta property="twitter:card" content="summary_large_image" />
           {config.siteMetadata.ogImage ? <meta property="twitter:image" content={config.siteMetadata.ogImage} /> : null}
           {config.siteMetadata.favicon ? <link rel="shortcut icon" type="image/svg" href={config.siteMetadata.favicon} /> : null}
-          {/* <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossOrigin="anonymous"
-          /> */}
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

@@ -7,11 +7,7 @@ import '../styles.css'
 import config from '../../../config'
 
 const Sidebar = styled('nav')`
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
-  position: fixed;
-  padding: 1rem;
+  padding-top: 1rem;
   position: sticky;
   top: 0;
 
@@ -55,6 +51,7 @@ const List = styled('ul')`
     display: inline-block;
     position: relative;
     width: 100%;
+    word-wrap: break-word
 
     &:hover {
       color: #1a202c;

@@ -1,31 +1,37 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'react-emotion'
-import Link from './link'
 import './styles.css'
 import config from '../../config'
 
-const forcedNavOrder = config.sidebar.forcedNavOrder
-
 const Sidebar = styled('nav')`
-  width: 100%;
-  background-color: #fff;
-  border-right: 1px solid #ede7f3;
-  height: 100vh;
   overflow: auto;
-  position: fixed;
-  padding-left: 24px;
-  position: -webkit-sticky;
-  position: -moz-sticky;
   position: sticky;
   top: 0;
+  padding-top: 1rem;
+
   @media only screen and (max-width: 50rem) {
     width: 100%;
     position: relative;
   }
 `
 
-// eslint-disable-next-line no-unused-vars
+const Ul = styled('ul')`
+  color: #718096;
+  border-left: 1px solid #edf2f7;
+
+  h6 {
+    font-size: 0.675rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #a0aec0;
+  }
+`
+
 const ListItem = styled(({ className, active, level, ...props }) => {
   return (
     <li className={className}>
@@ -36,29 +42,19 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   list-style: none;
 
   a {
-    color: #5c6975;
+    color: #718096;
     text-decoration: none;
-    font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
-    padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
     display: block;
     position: relative;
 
-    &:hover {
-      color: rgb(116, 76, 188) !important;
-    }
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
 
-    ${props =>
-      props.active &&
-      `
-      color: #663399;
-      border-color: rgb(230,236,241) !important;
-      border-style: solid none solid solid;
-      border-width: 1px 0px 1px 1px;
-      background-color: #fff;
-    `} // external link icon
-    svg {
-      float: right;
-      margin-right: 1rem;
+    &:hover {
+      color: #319795;
     }
   }
 `
@@ -108,16 +104,16 @@ const SidebarLayout = ({ location }) => (
       if (finalNavItems && finalNavItems.length) {
         return (
           <Sidebar>
-            <ul className={'rightSideBarUL'}>
-              <div className={'rightSideTitle'}>Sisällysluettelo</div>
+            <Ul>
+              <h6>Sisällysluettelo</h6>
               {finalNavItems}
-            </ul>
+            </Ul>
           </Sidebar>
         )
       } else {
         return (
           <Sidebar>
-            <ul></ul>
+            <Ul></Ul>
           </Sidebar>
         )
       }

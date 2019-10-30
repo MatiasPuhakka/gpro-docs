@@ -4,17 +4,12 @@ metaTitle: "Syntax Highlighting is the meta title tag for this page"
 metaDescription: "This is the meta description for this page"
 ---
 
-The following is a code block with JavaScript language syntax highlighting.
+This is the third page.
 
-```javascript
-import React from 'react';
-```
+## Second header
 
-Supports multiple languages.
+## Third
 
-The following is a code block with diff. Lines with `+` highlighted in green shade indicating an addition. Lines with `-` highlighted in red shade indicating a deletion.
+Text
 
-```javascript
-- const data = ['1','2'];
-+ const data = [1,2];
-```
+## Third second header

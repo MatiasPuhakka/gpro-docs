@@ -4,7 +4,7 @@ const Heading = system(
   {
     is: 'h2',
     fontSize: 5,
-    fontWeight: '700',
+    fontWeight: '300',
     lineHeight: 1.5,
     mt: 4,
     mb: 3
