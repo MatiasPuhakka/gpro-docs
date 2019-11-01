@@ -1,8 +1,8 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://gprodocs.netlify.com',
-    gaTrackingId: null
+    siteUrl: 'https://gpro-docs.netlify.com',
+    gaTrackingId: 'UA-151319793-2'
   },
   header: {
     logo: '',
@@ -26,7 +26,7 @@ const config = {
   },
   siteMetadata: {
     title: 'Test Docs for FGD',
-    description: 'Documentation built with mdx.',
+    description: 'Documentation built with md and coffee.',
     ogImage: null,
     docsLocation: '',
     favicon: ''
