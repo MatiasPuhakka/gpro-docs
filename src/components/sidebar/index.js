@@ -99,7 +99,7 @@ const SidebarLayout = ({ location }) => (
             })}
           </List>
           <hr />
-          <Link to="https://discord.gg/QyqsRr">
+          <Link to="https://discord.gg/ErcATyQ">
             <i class="fab fa-discord"></i> Discord
           </Link>
         </Sidebar>
