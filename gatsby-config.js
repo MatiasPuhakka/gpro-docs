@@ -49,7 +49,8 @@ const plugins = [
       // enable ip anonymization
       anonymize: false
     }
-  }
+  },
+  'gatsby-plugin-dark-mode'
 ]
 if (config.header.search && config.header.search.enabled && config.header.search.algoliaAppId && config.header.search.algoliaAdminKey) {
   plugins.push({

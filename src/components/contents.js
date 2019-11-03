@@ -9,16 +9,10 @@ const Sidebar = styled('nav')`
   position: sticky;
   top: 0;
   padding-top: 2rem;
-
-  @media only screen and (max-width: 50rem) {
-    width: 100%;
-    position: relative;
-  }
 `
 
 const Ul = styled('ul')`
-  color: #718096;
-  border-left: 1px solid #edf2f7;
+  border-left: 2px solid var(--hr);
 
   h6 {
     font-size: 0.675rem;
@@ -28,7 +22,7 @@ const Ul = styled('ul')`
     letter-spacing: 1.2px;
     padding-left: 0.5rem;
     margin-bottom: 0.5rem;
-    color: #a0aec0;
+    color: var(--titleColor);
   }
 `
 
@@ -42,7 +36,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
   list-style: none;
 
   a {
-    color: #718096;
+    color: var(--linkColor);
     text-decoration: none;
     display: block;
     position: relative;
@@ -54,7 +48,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     margin-bottom: 0.5rem;
 
     &:hover {
-      color: #319795;
+      color: var(--linkHoverColor);
     }
   }
 `

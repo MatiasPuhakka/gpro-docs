@@ -9,28 +9,12 @@ import config from '../../config'
 
 const forcedNavOrder = config.sidebar.forcedNavOrder
 
-injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html, body {
-    color: #2D3748;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-  }
-`
-
 const H1 = styled('h1')`
   margin-top: 2rem;
 `
 
 const Hr = styled('hr')`
-  border: 1px solid #edf2f7;
+  border: 1px solid var(--hr);
   margin: 1rem 0 2rem;
 `
 

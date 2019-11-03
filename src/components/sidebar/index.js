@@ -5,23 +5,15 @@ import Link from '../link'
 import styled from 'react-emotion'
 import '../styles.css'
 import config from '../../../config'
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 const Sidebar = styled('nav')`
   padding-top: 2rem;
   position: sticky;
   top: 0;
 
-  .navbar-brand {
-    color: var(--gray-700);
-    display: inline-block;
-    font-size: 1.5rem;
-    line-height: inherit;
-    white-space: nowrap;
-    text-decoration: none;
-  }
-
   a {
-    color: var(--gray-600);
+    color: var(--linkColor);
     font-size: 0.875rem;
     line-height: 1.5;
     text-decoration: none;
@@ -34,12 +26,18 @@ const Sidebar = styled('nav')`
     word-wrap: break-word;
 
     &:hover {
-      color: var(--gray-900);
+      color: var(--linkHoverColor);
+    }
+
+    &.navbar-brand {
+      color: var(--titleColor);
+      font-size: 1.5rem;
+      line-height: inherit;
     }
   }
 
   hr {
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--hr);
     margin: 1rem 0;
   }
 `
@@ -56,7 +54,7 @@ const List = styled('ul')`
       margin-bottom: 0.25rem;
 
       &.active a {
-        background: rgba(178, 245, 234, 0.25);
+        background: var(--linkBg);
         color: var(--teal);
         border-radius: 0.25rem;
       }
@@ -102,6 +100,13 @@ const SidebarLayout = ({ location }) => (
           <Link to="https://discord.gg/ErcATyQ">
             <i class="fab fa-discord"></i> Discord
           </Link>
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <label>
+                <input type="checkbox" onChange={e => toggleTheme(e.target.checked ? 'dark' : '')} checked={theme === 'dark'} /> Dark mode
+              </label>
+            )}
+          </ThemeToggler>
         </Sidebar>
       )
     }}
