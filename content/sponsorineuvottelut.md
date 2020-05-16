@@ -86,9 +86,9 @@ _Tämä on avainkysymys siihen kuinka paljon sponsori tarjoaa sinulle rahaa. Tä
 > Mitä mieltä olet tarjotusta summasta?
 
 - OK (1-2)
-- Hieman liian matala (3=50% ja 4=100%)
-- Liian matala (5=50% ja 6=100%)
-- Hyväksymiskelvoton (6=50% ja 7=100%)
+- Hieman liian vähäinen (3=50% ja 4=100%)
+- Aivan liian vähäinen (5=50% ja 6=100%)
+- Mahdoton hyväksyä (6=50% ja 7=100%)
 
 _Tähän vaikuttaa sponsorin **kärsivällisyys**. Jos vaadit liikaa, he sulkevat neuvottelut, jos vaadit vain hieman liikaa, he jättävät vaatimukset huomiotta. Elä siis vaadi liikaa, esimerkiksi viiden kärsivällisyydellä et voi vastata "Hyväksymiskelvoton"_
 
