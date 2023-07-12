@@ -1,29 +1,29 @@
 ---
-title: "Sponsorineuvottelut"
+title: "Miten hankkia sponsoreita - helpot ohjeet"
 metaTitle: "Sponsorineuvottelut"
 metaDescription: "Ohjeita sponsorineuvotteluissa onnistumiseen"
 ---
 
 Näillä ohjeilla onnistut sponsorineuvotteluissa aina
 
-## Sponsorin voi menettää kahdella tavalla
+## Sponsoreiden menettäminen
 
 1. Vastaamassa neuvotteluvaiheessa kysymykseen väärin.
-2. Saamalla huonoja tuloksia kisoissa pidemmän aikaa. Sponsorit antavat aina kaksi varoitusta ennen sopimuksen purkamista.
+2. Heikko suoritus kilpailuissa pitkällä aikavälillä. Sponsori antaa yleensä kaksi varoitusta ennen sopimuksen päättämistä.
 
 ## Sponsorien taidot
 
 ### Talous
 
-Vaikuttaa sponsorin tajoamaan rahalliseen palkkioon.
+Sponsorin talous määrää kuinka paljon he voivat tarjota sinulle rahaa.
 
 ### Odotukset
 
-Kuinka hyviä tuloksia sponsori odottaa sinulta. Mitä enemmän palkkeja, sitä paremmin sinun pitää ajaa (joka kisassa!). Tämä vaikuttaa neuvotteluiden toisessa vaiheessa.
+Sponsorin odotukset suoritustesi suhteen. Mitä suuremmat heidän odotuksensa ovat, sitä parempia tuloksia sinun on saavutettava jokaisessa kilpailussa. Tämä vaikuttaa neuvotteluiden toisessa vaiheessa.
 
 ### Kärsivällisyys
 
-Vaikuttaa siihen kuinka anteeksiantavainen sponsori on huonojen tuloksien suhteen, sekä kuinka suostuvainen sponsori on vaatimuksiisi neuvotteluvaiheissa neljä ja viisi. Enemmän palkkeja = parempi.
+Sponsorin kärsivällisyys määrittelee, kuinka paljon he sietävät heikkoja tuloksia ja kuinka valmiita he ovat joustamaan neuvotteluvaiheissa neljä ja viisi.
 
 ### Maine
 
